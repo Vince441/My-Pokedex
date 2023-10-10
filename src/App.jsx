@@ -21,10 +21,6 @@ function App() {
 <div>
 <PokemonCard pokemon = {pokemonList[0]} />
 </div>
-
-
-
-
   );
 }
 
