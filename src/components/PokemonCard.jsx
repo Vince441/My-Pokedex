@@ -11,9 +11,9 @@ const pokemonList = [
   ];
 
 
-function PokemonCard() {
-
-    const pokemon = pokemonList[0];
+function PokemonCard(props) {
+console.log(props)
+    const pokemon = props.pokemon;
 
     return (
     <>
