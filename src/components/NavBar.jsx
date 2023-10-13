@@ -1,30 +1,17 @@
+import React from "react";
 
-
-
-function NavBar({pokemonIndex, setpokemonIndex, pokemonListLength }){
-    console.log()
+function NavBar({ pokemonList, setPokemonIndex }) {
 
   
-    
-      return (
-     
-    
+  return (
     <div>
-    
-    {pokemonIndex > 0 && (
-             
-    <button onClick ={() => setpokemonIndex(pokemonIndex - 1)}>
-      Précedent</button>
-       )}
-    
-    
-    { pokemonIndex < pokemonListLength - 1 && (
-    
-    <button onClick ={() => setpokemonIndex(pokemonIndex + 1)}>
-      Suivant</button>
-    
-    )}
+      {pokemonList.map((pokemon, index) => (
+        <button key={index} onClick={() => setPokemonIndex(index)}>
+          {pokemon.name}
+        </button>
+      ))}
     </div>
-    )}
+  );
+}
 
-    export default NavBar
+export default NavBar;
